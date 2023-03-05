@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWP Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inder&family=Jaldi&display=swap');
+    </style>
+</head>
+<body onload="typeWriter()">
+    <div class="blocker" onclick="closeOverlay()" style="display: none;"></div>
+    <div class="navigation">
+        <p id="nav-title" class="title"></p>
+    </div>
+            </div>
+    <main>
+    <div class="photo-gallery-wrapper">
+
+    <div class="photoArray">
+    <!--Left List Section Code-->        
+    <ul id="photo-gallery" class="photo-gallery">
+        <li data-index="0"><button class="photolink" onclick="viewImage('image1')">
+            <img src="Mobile Images/First Folder/m-img- (1).jpg"
+            srcset="Mobile Images/First Folder/m-img- (1).jpg 640w,
+            First Folder/img-1.jpg 200w"
+            alt="Rick Rothenberg" target="blank" class="photo" loading="lazy"></button>
+            <p id="name" style="display: noe;"></p>
+        </li>
+
+        <li data-index="1"><button class="photolink" onclick="viewImage('image2')"><img src="Mobile Images/First Folder/m-img- (2).jpg"
+            srcset="Mobile Images/First Folder/m-img- (2).jpg 640w,
+                         First Folder/img-2.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+            <p id="name" style="display: none;"></p>
+        </li>
+
+        <li data-index="3"><button class="photolink" onclick="viewImage('image3')"><img src="Mobile Images/First Folder/m-img- (3).jpg"
+            srcset="Mobile Images/First Folder/m-img- (3).jpg 640w,
+                        First Folder/img-3.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>
+                
+        <li data-index="4"><button class="photolink" onclick="viewImage('image4')"><img src="Mobile Images/First Folder/m-img- (4).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (4).jpg 640w,
+                        First Folder/img-4.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>
+            
+        <li data-index="5"><button class="photolink" onclick="viewImage('image5')"><img src="Mobile Images/First Folder/m-img- (5).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (5).jpg 640w,
+                        First Folder/img-5.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="6"><button class="photolink" onclick="viewImage('image6')"><img src="Mobile Images/First Folder/m-img- (6).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (6).jpg 640w,
+                        First Folder/img-6.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="7"><button class="photolink" onclick="viewImage('image7')"><img src="Mobile Images/First Folder/m-img- (7).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (7).jpg 640w,
+                        First Folder/img-7.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="8"><button class="photolink" onclick="viewImage('image8')"><img src="Mobile Images/First Folder/m-img- (8).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (8).jpg 640w,
+                        First Folder/img-8.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="9"><button class="photolink" onclick="viewImage('image9')"><img src="Mobile Images/First Folder/m-img- (9).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (9).jpg 640w,
+                        First Folder/img-9.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="10"><button class="photolink" onclick="viewImage('image10')"><img src="Mobile Images/First Folder/m-img- (10).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (10).jpg 640w,
+                        First Folder/img-10.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="11"><button class="photolink" onclick="viewImage('image11')"><img src="Mobile Images/First Folder/m-img- (11).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (11).jpg 640w,
+                        First Folder/img-11.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="12"><button class="photolink" onclick="viewImage('image12')"><img src="Mobile Images/First Folder/m-img- (12).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (12).jpg 640w,
+                        First Folder/img-12.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="13"><button class="photolink" onclick="viewImage('image13')"><img src="Mobile Images/First Folder/m-img- (13).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (13).jpg 640w,
+                        First Folder/img-13.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="14"><button class="photolink" onclick="viewImage('image14')"><img src="Mobile Images/First Folder/m-img- (14).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (14).jpg 640w,
+                        First Folder/img-14.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="15"><button class="photolink" onclick="viewImage('image15')"><img src="Mobile Images/First Folder/m-img- (15).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (15).jpg 640w,
+                        First Folder/img-15.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="16"><button class="photolink" onclick="viewImage('image16')"><img src="Mobile Images/First Folder/m-img- (16).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (16).jpg 640w,
+                        First Folder/img-16.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="17"><button class="photolink" onclick="viewImage('image17')"><img src="Mobile Images/First Folder/m-img- (17).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (17).jpg 640w,
+                        First Folder/img-17.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="18"><button class="photolink" onclick="viewImage('image18')"><img src="Mobile Images/First Folder/m-img- (18).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (18).jpg 640w,
+                        First Folder/img-18.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="19"><button class="photolink" onclick="viewImage('image19')"><img src="Mobile Images/First Folder/m-img- (19).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (19).jpg 640w,
+                        First Folder/img-19.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="20"><button class="photolink" onclick="viewImage('image20')"><img src="Mobile Images/First Folder/m-img- (20).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (20).jpg 640w,
+                        First Folder/img-20.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+            
+        <li data-index="21"><button class="photolink" onclick="viewImage('image21')"><img src="Mobile Images/First Folder/m-img- (21).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (21).jpg 640w,
+                        First Folder/img-21.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="22"><button class="photolink" onclick="viewImage('image22')"><img src="Mobile Images/First Folder/m-img- (22).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (22).jpg 640w,
+                        First Folder/img-22.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="23"><button class="photolink" onclick="viewImage('image23')"><img src="Mobile Images/First Folder/m-img- (23).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (23).jpg 640w,
+                        First Folder/img-23.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="24"><button class="photolink" onclick="viewImage('image24')"><img src="Mobile Images/First Folder/m-img- (24).jpg" 
+            srcset="Mobile Images/First Folder/m-img- (24).jpg 640w,
+                        First Folder/img-24.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+    </ul>
+    </div>
+     
+    <div class="photoArray" style="display: none;">
+    <!--Middle List Section Code-->
+    <ul id="photo-gallery" class="photo-gallery">
+        <li data-index="25"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Second Folder/m-img- (25).jpg"
+            srcset="Mobile Images/Second Folder/m-img- (25).jpg 640w,
+            Second Folder/img-25.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>
+
+        <li data-index="26"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (26).jpg"
+            srcset="Mobile Images/Second Folder/m-img- (26).jpg 640w,
+            Second Folder/img-26.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>
+
+        <li data-index="27"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (27).jpg"
+            srcset="Mobile Images/Second Folder/m-img- (27).jpg 640w,
+            Second Folder/img-27.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>     
+
+        <li data-index="28"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (28).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (28).jpg 640w,
+            Second Folder/img-28.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button></li>
+            
+        <li data-index="29"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (29).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (29).jpg 640w,
+                        Second Folder/img-29.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="30"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (30).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (30).jpg 640w,
+                        Second Folder/img-30.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="31"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (31).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (31).jpg 640w,
+                        Second Folder/img-31.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="32"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (32).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (32).jpg 640w,
+            Second Folder/img-32.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="33"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (33).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (33).jpg 640w,
+            Second Folder/img-33.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="34"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (34).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (34).jpg 640w,
+            Second Folder/img-34.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="35"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (35).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (35).jpg 640w,
+            Second Folder/img-35.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="36"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (36).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (36).jpg 640w,
+        Second Folder/img-36.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="37"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (37).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (37).jpg 640w,
+            Second Folder/img-37.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="38"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (38).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (38).jpg 640w,
+            Second Folder/img-38.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="39"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (39).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (39).jpg 640w,
+            Second Folder/img-39.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="40"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (40).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (40).jpg 640w,
+            Second Folder/img-40.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="41"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (41).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (41).jpg 640w,
+            Second Folder/img-41.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="42"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (42).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (42).jpg 640w,
+            Second Folder/img-42.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="43"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (43).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (43).jpg 640w,
+            Second Folder/img-43.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="44"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (44).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (44).jpg 640w,
+            Second Folder/img-44.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+            
+        <li data-index="45"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (45).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (45).jpg 640w,
+            Second Folder/img-45.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="46"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (46).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (46).jpg 640w,
+            Second Folder/img-46.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="47"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (47).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (47).jpg 640w,
+            Second Folder/img-47.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+
+        <li data-index="48"><button class="photolink" onclick="viewImage()"><img src="Mobile Images/Second Folder/m-img- (48).jpg" 
+            srcset="Mobile Images/Second Folder/m-img- (48).jpg 640w,
+            Second Folder/img-48.jpg 800w"
+            alt="" class="photo" loading="lazy"></button></li>
+    </ul>
+    </div>
+    
+    <div class="photoArray" style="display: none;">
+    <!--Right List Section Code-->        
+    <ul id="photo-gallery" class="photo-gallery">
+        <li data-index="49"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (49).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (49).jpg 640w,
+            Third Folder/img-49.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="50"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (50).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (50).jpg 640w,
+            Third Folder/img-50.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="51"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (51).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (51).jpg 640w,
+            Third Folder/img-51.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="52"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (52).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (52).jpg 640w,
+            Third Folder/img-52.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="53"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (53).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (53).jpg 640w,
+            Third Folder/img-53.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="54"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (54).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (54).jpg 640w,
+            Third Folder/img-54.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="55"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (55).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (55).jpg 640w,
+            Third Folder/img-55.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="56"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (56).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (56).jpg 640w,
+            Third Folder/img-56.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="57"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (57).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (57).jpg 640w,
+            Third Folder/img-57.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="58"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (58).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (58).jpg 640w,
+            Third Folder/img-58.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="59"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (59).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (59).jpg 640w,
+            Third Folder/img-59.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="60"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (60).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (60).jpg 640w,
+            Third Folder/img-60.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="61"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (61).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (61).jpg 640w,
+            Third Folder/img-61.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="62"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (62).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (62).jpg 640w,
+            Third Folder/img-62.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="63"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (63).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (63).jpg 640w,
+            Third Folder/img-63.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="64"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (64).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (64).jpg 640w,
+            Third Folder/img-64.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="65"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (65).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (65).jpg 640w,
+            Third Folder/img-65.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="66"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (66).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (66).jpg 640w,
+            Third Folder/img-66.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="67"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (67).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (67).jpg 640w,
+            Third Folder/img-67.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="68"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (68).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (68).jpg 640w,
+            Third Folder/img-68.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="69"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (69).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (69).jpg 640w,
+            Third Folder/img-69.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="70"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (70).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (70).jpg 640w,
+            Third Folder/img-70.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+        <li data-index="71"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (71).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (71).jpg 640w,
+            Third Folder/img-71.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>
+
+
+        <li data-index="72"><button class="photolink" onclick="viewImage()">
+            <img src="Mobile Images/Third Folder/m-img- (72).jpg"
+            srcset="Mobile Images/Third Folder/m-img- (72).jpg 640w,
+            Third Folder/img-72.jpg 800w"
+            alt="rick-rothenberg image1" class="photo" loading="lazy"></button>
+        </li>  
+    </ul>    
+    </div>
+
+
+    </div>
+    </main>
+
+    <a class="previous-array-btn" onclick="newArray(-1)">❮</a>
+    <a class="next-array-btn" onclick="newArray(1)">❯</a>
+ 
+    <script type="text/javascript">
+
+        
+    /**/
+    var x = 0;
+        var newNavText = "JW's Photo Gallery";
+        var speed = 100;
+        function typeWriter() {
+        if(x < newNavText.length){
+        document.getElementById("nav-title").innerHTML += newNavText.charAt(x);
+            x++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+
+
+        const myArray = [
+        { title: 'Name: Rick Rothenberg', tags: 'Size: 0.093MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (1).jpg' },
+        { title: 'Name: Ari Gardinier', tags: 'Size: 0.049MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (2).jpg' },
+        { title: 'Name: Rick Rothenberg', tags: 'Size: 0.066MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (3).jpg' },
+        { title: 'Name: Rick Rothenberg', tags: 'Size: 0.056MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (4).jpg' },
+        { title: 'Name: Pramod Tiwari', tags: 'Size: 0.017MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (5).jpg' },
+        { title: 'Name: Mass Essig', tags: 'Size: 0.015MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (6).jpg' },
+        { title: 'Name: Maciek Sulkowski', tags: 'Size: 0.064MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (7).jpg' },
+        { title: 'Name: Matt Botsford', tags: 'Size: 0.0100MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (8).jpg' },
+        { title: 'Name: Pramod Tiwari', tags: 'Size: 0.024MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (9).jpg' },
+        { title: 'Name: Mahdi Bafande', tags: 'Size: 0.079MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (10).jpg' },
+        { title: 'Name: elCarito', tags: 'Size: 0.0164MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (11).jpg' },
+        { title: 'Name: Siddhant Rane', tags: 'Size: 0.039MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (12).jpg' },
+        { title: 'Name: Marek Piwnicki', tags: 'Size: 0.0234MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (13).jpg' },
+        { title: 'Name: Austin Mabe', tags: 'Size: 0.014MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (14).jpg' },
+        { title: 'Name: Jordan Conner', tags: 'Size: 0.0183MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (15).jpg' },
+        { title: 'Name: Devin Justesen', tags: 'Size: 0.087MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (16).jpg' },
+        { title: 'Name: Kyle Peyton', tags: 'Size: 0.074MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (17).jpg' },
+        { title: 'Name: Jade Masri', tags: 'Size: 0.045MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (18).jpg' },
+        { title: 'Name: Cam DiCecca', tags: 'Size: 0.0132MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (19).jpg' },
+        { title: 'Name: Jason Edwards', tags: 'Size: 0.025MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (20).jpg' },
+        { title: 'Name: Kateryna Hliznitsova', tags: 'Size: 0.058MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (21).jpg' },
+        { title: 'Name: Connor Coyne', tags: 'Size: 0.097MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (22).jpg' },
+        { title: 'Name: Mario Losereit', tags: 'Size: 0.045MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (23).jpg' },
+        { title: 'Name: Nik', tags: 'Size: 0.055MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/First Folder/m-img- (24).jpg' },
+
+        { title: 'Name: Whos Denilo?', tags: 'Size: 0.073MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (25).jpg' },
+        { title: 'Name: Nikka Luotio', tags: 'Size: 0.091MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (26).jpg' },
+        { title: 'Name: Mario Rotz', tags: 'Size: 0.058MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (27).jpg' },
+        { title: 'Name: Stephan Leonardi', tags: 'Size: 0.0152MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (28).jpg' },
+        { title: 'Name: Mark Bassario', tags: 'Size: 0.062MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (29).jpg' },
+        { title: 'Name: Frida Flowers', tags: 'Size: 0.094MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (30).jpg' },
+        { title: 'Name: Erik Mclean', tags: 'Size: 0.077MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (31).jpg' },
+        { title: 'Name: Carrie Borden', tags: 'Size: 0.028MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (32).jpg' },
+        { title: 'Name: Joshua Woroniecki', tags: 'Size: 0.0148MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (33).jpg' },
+        { title: 'Name: Christian Thöni', tags: 'Size: 0.063MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (34).jpg' },
+        { title: 'Name: Abik Peravan', tags: 'Size: 0.0123MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (35).jpg' },
+        { title: 'Name: Clark Gu', tags: 'Size: 0.036MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (36).jpg' },
+        { title: 'Name: Robert Linder', tags: 'Size: 0.051MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (37).jpg' },
+        { title: 'Name: Jevgeni Fil', tags: 'Size: 0.0104MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (38).jpg' },
+        { title: 'Name: Alexandr Podvalny', tags: 'Size: 0.038MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (39).jpg' },
+        { title: 'Name: Dynamic Wang', tags: 'Size: 0.060MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (40).jpg' },
+        { title: 'Name: Ian Chen', tags: 'Size: 0.060MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (41).jpg' },
+        { title: 'Name: Will Swan', tags: 'Size: 0.016MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (42).jpg' },
+        { title: 'Name: Josh Berquist', tags: 'Size: 0.074MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (43).jpg' },
+        { title: 'Name: Markus Spiske', tags: 'Size: 0.041MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (44).jpg' },
+        { title: 'Name: Jonathan Gallegos', tags: 'Size: 0.062MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (45).jpg' },
+        { title: 'Name: Bernd Dittrich', tags: 'Size: 0.023MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (46).jpg' },
+        { title: 'Name: Mario Losereit', tags: 'Size: 0.0263MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (47).jpg' },
+        { title: 'Name: Nik', tags: 'Size: 0.0145MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Second Folder/m-img- (48).jpg' },
+
+        { title: 'Name: Joshua Gerosa', tags: 'Size: 0.080MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (49).jpg' },
+        { title: 'Name: Annie Spratt', tags: 'Size: 0.0103MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (50).jpg' },
+        { title: 'Name: Casey Horner', tags: 'Size: 0.044MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (51).jpg' },
+        { title: 'Name: Kevin Nalty', tags: 'Size: 0.057MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (52).jpg' },
+        { title: 'Name: Alex Alvarado', tags: 'Size: 0.056MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (53).jpg' },
+        { title: 'Name: John Rodenn Castillo', tags: 'Size: 0.095MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (54).jpg' },
+        { title: 'Name: Ian dooley', tags: 'Size: 0.048MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (55).jpg' },
+        { title: 'Name: Laura Vinck', tags: 'Size: 0.067MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (56).jpg' },
+        { title: 'Name: Ian dooley', tags: 'Size: 0.046MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (57).jpg' },
+        { title: 'Name: Krystal Ng', tags: 'Size: 0.061MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (58).jpg' },
+        { title: 'Name: SIMON LEE', tags: 'Size: 0.034MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (59).jpg' },
+        { title: 'Name: Alexander Andrews', tags: 'Size: 0.024MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (60).jpg' },
+        { title: 'Name: Zoltan Tasi', tags: 'Size: 0.052MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (61).jpg' },
+        { title: 'Name: History in HD', tags: 'Size: 0.0139MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (62).jpg' },
+        { title: 'Name: Nicolas I.', tags: 'Size: 0.039MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (63).jpg' },
+        { title: 'Name: Clint McKoy', tags: 'Size: 0.065MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (64).jpg' },
+        { title: 'Name: Noah Buscher', tags: 'Size: 0.0119MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (65).jpg' },
+        { title: 'Name: Nick Chalkiadakis', tags: 'Size: 0.042MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (66).jpg' },
+        { title: 'Name: Shubham Dhage', tags: 'Size: 0.067MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (67).jpg' },
+        { title: 'Name: Josh Hild', tags: 'Size: 0.095MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (68).jpg' },
+        { title: 'Name: Keanu K', tags: 'Size: 0.097MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (69).jpg' },
+        { title: 'Name: Andy Holmes', tags: 'Size: 0.0138MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (70).jpg' },
+        { title: 'Name: Sander Sammy', tags: 'Size: 0.098MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (71).jpg' },
+        { title: 'Name: Andrea De Santis', tags: 'Size: 0.071MB', desc: 'Resolution: 640 x 640px', image: 'Mobile Images/Third Folder/m-img- (72).jpg' },
+      ];
+        const myArrayElements = document.querySelectorAll('#photo-gallery li');
+      
+        myArrayElements.forEach((element, index) => {
+            element.addEventListener('click', () => {
+          localStorage.setItem('selectedElement', JSON.stringify(myArray[index]));
+          window.location.href = 'screen2.html';
+         });
+        });
+
+
+        //New Script for Carousel
+        let arrayIndex = 1;
+        displayArray(arrayIndex);
+
+        function newArray(n) {
+        displayArray(arrayIndex += n);
+        }
+        function defaultArray(n) {
+        displayArray(arrayIndex = n);
+        }
+        function displayArray(n) {
+        let i;
+        let array = document.getElementsByClassName("photoArray");
+
+        if (n > array.length) {
+            arrayIndex = 1;
+        }
+
+        if (n < 1) {
+            arrayIndex = array.length;
+        }
+        for (i = 0; i < array.length; i++) {
+            array[i].style.display = "none";  
+        }
+        array[arrayIndex - 1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>

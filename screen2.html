@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
+
+    <title>JW'S Photo Gallery</title>
+    <style>
+        :root {
+                /*Color Theme*/
+    --darkblue: #002349;
+    --darkerblue: #03152a;
+    --beige: #E0CCB2;
+    --coral-red: #FF595A;
+    --overlay: rgb(224, 204, 178);
+
+    --outline: 2px solid rgb(97, 175, 52);
+
+    --ff-Inder: 'Inder', sans-serif;
+    --ff-Jaldi: 'Jaldi', sans-serif;
+        }
+        body {
+            background-color: var(--darkblue);
+            place-content: center;
+            margin: 0 auto;
+            overflow: auto;
+            margin-bottom: 10rem;
+        }
+
+        * {
+            text-align: center;
+            color: var(--beige);
+            font-family: var(--ff-Jaldi);
+        }
+
+        .navigation {
+        background-color: var(--beige);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        }
+
+        .title {
+        color: var(--coral-red);
+        font-family: var(--ff-Inder);
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header-wrapper {
+            width: 100%;
+            margin-block: 2rem;
+            width: 100%;
+            display: grid;
+            place-content: start;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        img {
+            border-radius: 5px;
+            width: 200px;
+            height: 100%;
+            object-fit: cover;
+            animation-name: image-cpy;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes image-cpy {
+            0% {opacity: 0;}
+            100% {opacity: 100%;}
+        }
+
+        .home-link {
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--coral-red);
+            background-color: rgb(0, 0, 0, 0.7);
+            padding: 10px 35px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: linear 0.2s;
+        }
+        
+        .home-link:hover {
+            background-color: var(--beige);
+            transition: linear 0.2s;
+        }
+
+        .image-container {
+            display: grid;
+            gap: 50px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: cell;
+            transition: linear 0.2s;
+        }
+
+        .description-wrapper {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: var(--coral-red);
+            justify-content: left;
+            padding-block: 12px;
+        }
+        /**/
+
+        .details-wrapper {
+            display: grid;
+            gap: 5px;
+            padding-left: 15px;
+            color: var(--beige);
+            font-family: var(--ff-Jaldi);
+            font-size: 12px;
+        }
+
+        .details-wrapper > * {
+            text-align: left;
+        }
+
+        @media screen and (max-width: 180px) {
+            .image-container {
+                margin-block: 0;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        } 
+
+        @media screen and (min-width: 180px) {
+            img {
+                width: 180px;
+                height: 180px;
+            }
+        } 
+
+        @media screen and (min-width: 300px) {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        } 
+
+        @media screen and (min-width: 420px) {
+            .image-container {
+                margin-block: 7rem;
+            }
+
+            img {
+                width: 240px;
+                height: 240px;
+            }
+        }
+
+
+        @media screen and (min-width: 500px) {
+            .image-container {
+                margin-block: 13rem;
+            }
+
+            img {
+                width: 420px;
+                height: 420px;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            .image-container {
+                margin-block: 5rem;
+            }
+
+            img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .image-container {
+                margin-block: 20rem;
+            }
+
+            img {
+                width: 550px;
+                height: 550px;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <p id="nav-title" class="title">JW's Photo Gallery</p>
+    </div>
+
+    <main>
+    <div class="image-container">
+        <div>
+            <img id="selectedImage" src="" alt="" ondblclick="dbClickEl()">
+        </div>
+
+            <div class="description-wrapper">
+                <div class="details-wrapper">
+                    <p id="selectedTitle"></p>
+                    <p id="selectedSize"></p>
+                    <p id="selectedRes"></p>
+                </div>
+            </div>
+    </div>
+        
+    </div>
+
+    <a class="home-link" href="index.html">HOME</a>
+    </main>
+
+    </body>
+    <script>
+//
+        document.addEventListener('touchstart', handleTouchStart, false);
+        document.addEventListener('touchmove', handleTouchMove, false);
+
+        var startY = null;
+        function handleTouchStart(event) {
+        startY = event.touches[0].clientY;
+        }
+
+        function handleTouchMove(event) {
+        if (!startY) {
+            return;
+        }
+
+        var currentY = event.touches[0].clientY;
+
+        if (currentY < startY) {
+            swipeOverlayImg();
+            startY = null;
+            }
+        }
+
+        function swipeOverlayImg() {
+        var image = document.getElementById("selectedImage");
+        var imageDescWrapper = document.querySelector("description-wrapper");
+
+        image.style.transition = "linear 0.2s";
+        image.style.transform = "translateY(-100px)";
+        image.style.width = "200px";
+        image.style.height = "200px";
+        imageDescWrapper.style.display = "block"; 
+        }
+
+
+
+
+        /**/
+        var x = 0;
+        var newNavText = "JW's Photo Gallery";
+        var speed = 100;
+        function typeWriter() {
+        if(x < newNavText.length){
+        document.getElementById("nav-title").innerHTML += newNavText.charAt(x);
+            x++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+        function dbClickEl(){
+        let image = document.getElementById("selectedImage");
+            if(image.style.transform === "scale(1)"){
+                image.style.transform = "scale(1.3)";
+                image.style.transition = "linear 0.2s";
+            }else {
+                image.style.transform = "scale(1)";
+                image.style.transition = "linear 0.2s";
+            }
+        };
+
+        const selectedElement = JSON.parse(localStorage.getItem('selectedElement'));
+        const selectedTitleElement = document.getElementById('selectedTitle');
+        const selectedImageElement = document.getElementById('selectedImage');
+        const selectedTagElement = document.getElementById('selectedSize');
+        const selectedResolutionElement = document.getElementById('selectedRes');
+      
+        selectedTitleElement.textContent = selectedElement.title;
+        selectedImageElement.src = selectedElement.image;
+        selectedTagElement.textContent = selectedElement.tags;
+        selectedResolutionElement.textContent = selectedElement.desc;
+        
+    </script>
+</body>
+</html>
